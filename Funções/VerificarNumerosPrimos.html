@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verificar Número Primo</title>
+</head>
+<body>
+
+<p>Insira um número e clique no botão para verificar se é primo:</p>
+<input type="number" id="numero">
+<button onclick="verificarPrimo()">Verificar</button>
+<p id="resultado"></p>
+
+<script>
+function verificarPrimo() {
+    var numero = parseInt(document.getElementById("numero").value);
+    var primo = true;
+
+    if (numero <= 1) {
+        primo = false;
+    } else {
+        for (var i = 2; i <= Math.sqrt(numero); i++) {
+            if (numero % i === 0) {
+                primo = false;
+                break;
+            }
+        }
+    }
+
+    var resultadoElement = document.getElementById("resultado");
+    if (primo) {
+        resultadoElement.textContent = numero + " é um número primo.";
+    } else {
+        resultadoElement.textContent = numero + " não é um número primo.";
+    }
+}
+</script>
+
+</body>
+</html>

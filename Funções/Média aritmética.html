@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Média Aritmética</title>
+</head>
+<body>
+
+<h1>Calculadora de Média Aritmética</h1>
+
+<label for="numeros">Digite os números separados por vírgula:</label>
+<input type="text" id="numeros">
+
+<button onclick="calcularMedia()">Calcular Média</button>
+
+<p id="resultado"></p>
+
+<script>
+function calcularMedia() {
+    var numerosInput = document.getElementById("numeros").value;
+    var numerosArray = numerosInput.split(",").map(Number);
+    
+    if (numerosArray.length === 0) {
+        document.getElementById("resultado").innerHTML = "Digite pelo menos um número.";
+        return;
+    }
+    
+    var soma = 0;
+    for (var i = 0; i < numerosArray.length; i++) {
+        soma += numerosArray[i];
+    }
+    
+    var media = soma / numerosArray.length;
+    document.getElementById("resultado").innerHTML = "A média aritmética é: " + media.toFixed(2);
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <p>Clique no botão para calcular a soma dos elementos do array:</p>
+  <button onclick="calcularSoma()">Calcular</button>
+  <p id="resultado"></p>
+
+  <script>
+   function calcularSoma() {
+     var meuArray = [1, 2, 3, 4, 5];
+     var soma = 0;
+
+     for (var i = 0; i < meuArray.length; i++) {
+         soma += meuArray[i];
+     }
+
+     var resultadoElement = document.getElementById("resultado");
+     resultadoElement.textContent = "A soma dos elementos é: " + soma;
+    }
+</script>
+
+</body>
+</html>

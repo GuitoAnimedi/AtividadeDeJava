@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Palavras em Maiúsculas</title>
+</head>
+<body>
+
+<p>Clique no botao para transformar as palavras em maiusculas:</p>
+<button onclick="converterParaMaiusculas()">Converter</button>
+<p id="resultado"></p>
+
+<script>
+function converterParaMaiusculas() {
+    var palavras = ["Garden", "Fera", "alem", "Over"];
+    var palavrasEmMaiusculas = palavras.map(function(palavra) {
+        return palavra.toUpperCase();
+    });
+
+    var resultadoElement = document.getElementById("resultado");
+    resultadoElement.textContent = "Palavras em maiusculas: " + palavrasEmMaiusculas.join(", ");
+}
+</script>
+
+</body>
+</html>

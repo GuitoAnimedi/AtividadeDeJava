@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remover Duplicados</title>
+</head>
+<body>
+
+<p>Clique no botão para remover elementos duplicados do array:</p>
+<button onclick="removerDuplicados()">Remover Duplicados</button>
+<p id="resultado"></p>
+
+<script>
+function removerDuplicados() {
+    var originalArray = [1, 2, 2, 3, 4, 4, 5, 6, 6];
+    var arraySemDuplicados = [];
+
+    for (var i = 0; i < originalArray.length; i++) {
+        if (arraySemDuplicados.indexOf(originalArray[i]) === -1) {
+            arraySemDuplicados.push(originalArray[i]);
+        }
+    }
+
+    var resultadoElement = document.getElementById("resultado");
+    resultadoElement.textContent = "Array sem duplicados: " + arraySemDuplicados.join(", ");
+}
+</script>
+
+</body>
+</html>

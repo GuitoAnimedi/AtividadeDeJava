@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Pares</title>
+</head>
+<body>
+    <h1>Números Pares</h1>
+    
+    <button onclick="exibirNumerosPares()">Exibir Números Pares</button>
+
+    <div id="resultado">
+        <!-- Os números pares serão exibidos aqui -->
+    </div>
+
+    <script>
+        function exibirNumerosPares() {
+            const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; // Exemplo de array de números
+            const resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.innerHTML = ""; // Limpar resultados anteriores
+
+            for (const numero of numeros) {
+                if (numero % 2 === 0) {
+                    const p = document.createElement("p");
+                    p.textContent = numero;
+                    resultadoDiv.appendChild(p);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

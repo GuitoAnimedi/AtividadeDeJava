@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palavras em Ordem Reversa</title>
+</head>
+<body>
+    <h1>Palavras em Ordem Reversa</h1>
+    
+    <div>
+        <label for="string">Digite uma string:</label>
+        <input type="text" id="string">
+        <button onclick="reverterOrdem()">Reverter Ordem</button>
+    </div>
+
+    <p id="resultado"></p>
+
+    <script>
+        function reverterOrdem() {
+            const inputString = document.getElementById("string").value;
+            const palavras = inputString.split(' ');
+            const ordemReversa = palavras.reverse().join(' ');
+
+            document.getElementById("resultado").textContent = ordemReversa;
+        }
+    </script>
+</body>
+</html>

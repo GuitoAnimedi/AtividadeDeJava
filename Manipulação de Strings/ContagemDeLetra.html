@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem de Letra</title>
+</head>
+<body>
+    <h1>Contagem de Letra</h1>
+    
+    <div>
+        <label for="string">Digite uma string:</label>
+        <input type="text" id="string">
+        <label for="letra">Digite uma letra:</label>
+        <input type="text" id="letra" maxlength="1">
+        <button onclick="contarLetra()">Contar</button>
+    </div>
+
+    <p id="resultado"></p>
+
+    <script>
+        function contarLetra() {
+            const inputString = document.getElementById("string").value.toLowerCase();
+            const letra = document.getElementById("letra").value.toLowerCase();
+
+            const count = inputString.split(letra).length - 1;
+
+            document.getElementById("resultado").textContent = `A letra "${letra}" aparece ${count} vezes na string.`;
+        }
+    </script>
+</body>
+</html>
+ 
